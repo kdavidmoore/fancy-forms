@@ -1,4 +1,4 @@
-#form-wrapper{
+#form-wrapper {
 	width: 500px;
 	padding: 30px;
 	margin: auto;
@@ -8,7 +8,7 @@
 
 }
 
-h1{
+h1 {
 	background-color: #2a88ad;
 	padding: 20px 30px 15px;
 	color: #fff;
@@ -18,19 +18,24 @@ h1{
 	box-shadow: 0px 2px 2px 0px rgba(255,255,255,0.17);
 }
 
-h1 span{
+h1 span {
 	margin-top: 10px;
 	font-size: 14px;
 	display: block;
 }
 
- #form-wrapper .section{
+.form-wrapper {
+	padding: 10px;
+	background-color: #f8f8f8;
+}
+
+.section {
 	font-size: 24px;
 	color: #2a88ad;
 	margin: 10px 0;
 }
 
-#form-wrapper .section span{
+.section span {
 	background-color: #2a88ad;
 	padding: 5px 10px;
 	border-radius: 50%;
@@ -41,18 +46,13 @@ h1 span{
 	position: absolute;
 }
 
-#form-wrapper label{
+label {
 	display: block;
 	font: 13px Arial, sans-serif;
 	color: #888;
 }
 
-.form-wrapper{
-	padding: 10px;
-	background-color: #f8f8f8;
-}
-
-#form-wrapper input{
+input {
 	display: block;
     width: 90%;
     padding: 8px;
@@ -63,7 +63,7 @@ h1 span{
     margin-top: 5px;	
 }
 
-#form-wrapper input[type=submit]{
+input[type=submit] {
 	background: #2a88ad;
     border-radius: 6px;
     color: white;
@@ -73,14 +73,14 @@ h1 span{
     float: left;
 }
 
-#form-wrapper .privacy {
+.privacy {
     float: right;
     font: 12px serif;
     color: #4d4d4d;
     margin-top: 10px;
 }
 
-#form-wrapper .privacy input{
+.privacy input {
     box-shadow: none;
     width: initial;	
     float: left;
