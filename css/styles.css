@@ -63,7 +63,7 @@ input {
     margin-top: 5px;	
 }
 
-input[type=submit] {
+button {
 	background: #2a88ad;
     border-radius: 6px;
     color: white;
@@ -71,6 +71,7 @@ input[type=submit] {
     cursor: pointer;
     width: 120px;
     float: left;
+    font-size: 16px;
 }
 
 .privacy {
