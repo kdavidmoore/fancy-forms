@@ -8,6 +8,7 @@ function getValidatedInput() {
 	var original = "";
 	var caps = "";
 	var foundCaps = 0;
+    var problem = "";
 
     var thisName = document.getElementById("name").value;
     var thisAddress = document.getElementById("address").value;
@@ -37,12 +38,14 @@ function getValidatedInput() {
     for (var prop in myData) {
     	if (myData[prop] == "") {
     		validated = false;
+            problem = "you left one or more forms empty.";
     	}
     }
     console.log(validated);
 
     if (thisPassword1 != thisPassword2) {
     	validated = false;
+        problem = "the passwords don't match.";
     }
     console.log(validated);
     
@@ -53,32 +56,39 @@ function getValidatedInput() {
     }
     if (foundNumber < 1) {
     	validated = false;
+        problem = "the password must have at least one number.";
     }
     console.log(validated);
 
     for (i=0; i<thisPassword1.length; i++) {
     	original = thisPassword1[i];
     	caps = original.toUpperCase();
-    	if (original == caps) {
+    	if (isNaN(original) && original == caps) {
     		foundCaps++;
     	}
     }
     if (foundCaps < 1) {
     		validated = false;
+            problem = "the password must have at least one capital letter.";
     }
     console.log(validated);
 
     if (thisPassword1.length < 8 || thisPassword2.length < 8) {
     	validated = false;
+        problem = "the password must be at least 8 characters long.";
     }
     console.log(validated);
 
    	if (!isChecked) {
     	validated = false;
+        problem = "you must agree to the terms and conditions to proceed.";
     }
     console.log(validated);
 
     if (!validated) {
-    	alert("Oh noes! Form input was not validated.");
+    	alert("Oh noes! Form input was not validated. Looks like the problem might be: " + problem);
+    } else {
+        alert("Success! Your info has been submitted.");
+        window.location.reload();
     }
 }
