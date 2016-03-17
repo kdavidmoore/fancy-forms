@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Le Fancy Forms</title>
 
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -9,63 +9,69 @@
 </head>
 <body>
 	<div id="form-wrapper">
-		<form>
+		<form id="validated-info" onsubmit="return false">
 		
 			<h1>Sign up now!<span>Sign up and tell me what you think of my site!</span></h1>
 
-			<div class="section"><span>1</span>First Name & Address</div>
+			<div class="section"><span>1</span>First Name &amp; Address</div>
 
 			<div class="form-wrapper">	
 				<label>Your full name
-					<input type="text" name="fullName" placeholder="Your full name" value="">
+					<input id="name" type="text" name="fullName" placeholder="Your full name" value="">
 				</label>
 			</div>
 			<div class="form-wrapper">	
 				<label>Address
-					<input type="text" name="address1" placeholder="Address" value="">
+					<input id="address" type="text" name="address1" placeholder="Address" value="">
 				</label>
 			</div>
 
-			<div class="section"><span>2</span>Email & Phone</div>
+			<div class="section"><span>2</span>Email &amp; Phone</div>
 			<div class="form-wrapper">	
 				<label>Email
-					<input type="email" name="email" placeholder="Email" value="">
+					<input id="email" type="email" name="email" placeholder="Email" value="">
 				</label>
 			</div>
 			<div class="form-wrapper">	
 				<label>Phone
-					<input type="text" name="phoneNumber" placeholder="Phone Number" value="">
+					<input id="phone" type="text" name="phoneNumber" placeholder="Phone Number" value="">
 				</label>
 			</div>
 
 			<div class="section"><span>3</span>Password</div>
 			<div class="form-wrapper">	
 				<label>Password
-					<input type="password" name="password" placeholder="Password" value="">
+					<input id="password1" type="password" name="password" placeholder="Password" value="">
 				</label>
 			</div>
 			<div class="form-wrapper">	
 				<label>Confirm Password
-					<input type="password" name="comfirmPassword" placeholder="Confrim Password" value="">
+					<input id="password2" type="password" name="comfirmPassword" placeholder="Confrim Password" value="">
 				</label>
 			</div>
 
 			<div class="section"><span>4</span>Skills</div>
 			<div class="form-wrapper">	
 				<label>My Tech Skills
-					<input type="text" name="techSkills" placeholder="My Technical Skills" value="">
+					<input id="skills" type="text" name="techSkills" placeholder="My Technical Skills" value="">
 				</label>
 				<label>My Age
-					<input type="number" name="age" placeholder="My Age" value="">
+					<input id="age" type="number" name="age" placeholder="My Age" value="">
 				</label>
 
 			</div>
 
 			<div class="form-wrapper">	
-				<input type="submit" value="Sign Me Up!">
-				<span class="privacy"><input type="checkbox" name="privacy">I agree to the terms and policies</span>
+				<button id="submit-button" onclick="getValidatedInput()">Sign Me Up!</button>
+				<span class="privacy"><input id="agree-checkbox" type="checkbox" name="privacy">I agree to the terms and policies</span>
 			</div>
 		</form>
+
+		<div id="message">
+
+		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="validated.js"></script>
 </body>
 </html>
